@@ -27,12 +27,12 @@ public class ArraySum {
 
 		// a = {3,5,2,6,7,1};
 
-		if (index <= 0) {
-			arrSum = 0; // base case
+		if (index == 0) {
+			arrSum = a[index]; // base case
 		} else {
 			int previousElementIndex = (index - 1); // element on the right of current index
 
-			arrSum = a[previousElementIndex] + sumOfArray(a, (previousElementIndex)); // reproduction
+			arrSum = a[index] + sumOfArray(a, (previousElementIndex)); // reproduction
 		}
 
 		return arrSum;
